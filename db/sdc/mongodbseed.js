@@ -2,7 +2,7 @@
 const fs = require('fs');
 const v8 = require('v8');
 
-const name = ['"The Foxes Den"', '"Riverfront Getaway"', '"The Real BatCave"', '"Luxury Treehouse in the Redwoods"', '"Modern Beach Pad"', '"Juju Town Retreat"', '"Sunny Bungalow"'];
+const name = ['"The Foxes Den"', '"Riverfront Getaway"', '"The Real BatCave"', '"Luxury Estate in Paradise"', '"Modern Beach Villa"', '"Juju Town Retreat"', '"Sunny Bungalow"'];
 
 const description = ['Amazing getaway', 'One of a kind experience', 'Once in a lifetime adventure', 'Breathtaking residence', 'Perfectly located'];
 
@@ -103,7 +103,7 @@ writeNTimes = (writer, min, max, callback) => {
         dataString += `${latitude[min % 6]},`;
         dataString += `${category[min % 7]},`;
         dataString += `${superHost[min % 2]},`;
-        dataString += `"[${relatedPlaceID2},${relatedPlaceID2},${relatedPlaceID3},${relatedPlaceID4},${relatedPlaceID5},${relatedPlaceID6},${relatedPlaceID7},${relatedPlaceID8},${relatedPlaceID9},${relatedPlaceID10},${relatedPlaceID11},${relatedPlaceID12}]"`;
+        dataString += `"[${relatedPlaceID1},${relatedPlaceID2},${relatedPlaceID3},${relatedPlaceID4},${relatedPlaceID5},${relatedPlaceID6},${relatedPlaceID7},${relatedPlaceID8},${relatedPlaceID9},${relatedPlaceID10},${relatedPlaceID11},${relatedPlaceID12}]"`;
         dataString += `\n`;
 
       if (min % max === 0) {
@@ -126,6 +126,6 @@ const writeStream = fs.createWriteStream('./csvdata/mongodb.csv')
 
 const line1 = 'id,name,description,avgRating,numratings,image,rate,wasLiked,postedDate,longitude,latitude,category,superHost,relatedPlaces\n';
 writeStream.write(line1);
-writeNTimes(writeStream, 1, 10000000, ()=>{
+writeNTimes(writeStream, 1, 100, ()=>{
   console.log('written!')
 })

@@ -2,9 +2,9 @@
 const fs = require('fs');
 const v8 = require('v8');
 
-const name = ['The Foxes Den', 'Getaway in Paradise', 'The Real BatCave', 'Villa by the Sea', 'Epic Beach Pad', 'Cliff Town Retreat', 'Sunny Bungalow'];
+const name = ['Entire Residence · 4 beds', 'Private Guesthouse · 2 beds', 'Royal Bungalow', 'Entire Mansion 5 beds', 'Guest Bedroom · 1 bed', 'Entire House · 6 beds', 'Entire Guest Suite · 3 beds'];
 
-const description = ['Amazing getaway', 'One of a kind experience', 'Once in a lifetime adventure', 'Breathtaking residence', 'Perfectly located'];
+const description = ['Getaway in Paradise', 'One of a kind experience', 'Once in a lifetime adventure', 'Cliff Town Retreat', 'Villa by the Sea'];
 
 const avgRating = [4.53, 3.75, 4.78, 3.25, 4.93, 4.23, 4.11, 4.42];
 
@@ -128,6 +128,6 @@ const writeStream = fs.createWriteStream('./csvdata/mongodb.json')
 
 // const line1 = 'id,name,description,avgRating,numratings,image,rate,wasLiked,postedDate,longitude,latitude,category,superHost,relatedPlaces\n';
 // writeStream.write(line1);
-writeNTimes(writeStream, 1, 10000000, ()=>{
+writeNTimes(writeStream, 1, 100, ()=>{
   console.log('written!')
 })

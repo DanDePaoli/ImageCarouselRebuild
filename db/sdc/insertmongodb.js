@@ -1,4 +1,4 @@
-mongoimport--type csv -d hrsfsdc - c places--headerline--drop mongodb.csv
+mongoimport--type csv -d ddpcarousel - c places--headerline--drop mongodb.csv
 
 mongoimport--type json -d hrsfsdc - c places--drop mongodb.json
 
