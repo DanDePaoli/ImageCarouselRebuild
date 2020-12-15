@@ -124,7 +124,7 @@ writeNTimes = (writer, min, max, callback) => {
 }
 
 
-const writeStream = fs.createWriteStream('./csvdata/mongodb.json')
+const writeStream = fs.createWriteStream('./seeddata/mongoseeddata.json')
 
 // const line1 = 'id,name,description,avgRating,numratings,image,rate,wasLiked,postedDate,longitude,latitude,category,superHost,relatedPlaces\n';
 // writeStream.write(line1);

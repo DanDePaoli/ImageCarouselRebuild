@@ -1,6 +1,7 @@
-mongoimport--type csv -d ddpcarousel - c places--headerline--drop mongodb.csv
+mongoimport--type csv -d hrsfsdc -c places--headerline--drop mongodb.csv
 
-mongoimport--type json -d hrsfsdc - c places--drop mongodb.json
+mongoimport--type json -d hrsfsdc -c places--drop mongodb.json
+mongoimport -d ddpcarousel -c places --drop --file mongoseeddata.json
 
 –type: The input format to import: json, csv, or tsv.We are using csv so that’s what we specify.
 - d: Specifies what database to use.We used the test database.
@@ -16,7 +17,7 @@ db.runCommand({
   dbStats: 1,
 })
 
-db.places.find({ id: 8675309 })
+db.places.find({ id: 1 })
 
 db.places.find().explain("executionStats")
 

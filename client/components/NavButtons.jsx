@@ -70,31 +70,36 @@ class NavButtons extends React.Component {
 
   handleRightClick() {
 
-    this.props.scrollRight();
-    // let curCount = this.state.currentPage;
-    // if (curCount === this.state.totalPages) {
-    //   const resetState = 1;
-    //   this.setState({ currentPage: resetState });
-    //   this.handlePageChange(resetState);
-    // } else {
-    //   curCount += 1;
-    //   this.setState({ currentPage: curCount });
-    //   this.handlePageChange(curCount);
-    // }
+
+    let curCount = this.state.currentPage;
+    if (curCount === this.state.totalPages) {
+      const resetState = 1;
+      this.setState({ currentPage: resetState });
+
+      this.props.resetBeginning()
+      // this.handlePageChange(resetState);
+    } else {
+      curCount += 1;
+      this.setState({ currentPage: curCount });
+      this.props.scrollRight();
+      // this.handlePageChange(curCount);
+    }
   }
 
   handleLeftClick() {
-   this.props.scrollLeft();
-    // let curCount = this.state.currentPage;
-    // if (curCount === 1) {
-    //   this.setState({ currentPage: this.state.totalPages });
-    //   this.handlePageChange(this.state.totalPages);
-    // }
-    // if (curCount !== 1) {
-    //   curCount -= 1;
-    //   this.setState({ currentPage: curCount });
-    //   this.handlePageChange(curCount);
-    // }
+
+    let curCount = this.state.currentPage;
+    if (curCount === 1) {
+      this.setState({ currentPage: this.state.totalPages });
+      this.props.resetToEnd()
+      // this.handlePageChange(this.state.totalPages);
+    }
+    if (curCount !== 1) {
+      curCount -= 1;
+      this.setState({ currentPage: curCount });
+      this.props.scrollLeft();
+      // this.handlePageChange(curCount);
+    }
   }
 
 

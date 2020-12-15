@@ -27,7 +27,7 @@ module.exports = {
 
 
   getPlaces: (callback) => {
-    var placeid = Math.floor(Math.random() * 10000);
+    var placeid = Math.floor(Math.random() * 100);
     Places.aggregate([
       { $match: { id: placeid } },
       {

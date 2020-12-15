@@ -46,7 +46,8 @@ const OuterWrapper = styled.div`
   margin-left: auto;
   padding-bottom: 40px;
   padding-top: 40px;
-  max-width:1280px;
+  // max-width:1280px;
+  max-width: auto;
 `;
 
 class App extends React.Component {
@@ -68,6 +69,8 @@ class App extends React.Component {
     this.listRef = React.createRef();
     this.scrollLeft = this.scrollLeft.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
+    this.resetToEnd = this.resetToEnd.bind(this);
+    this.resetBeginning = this.resetBeginning.bind(this);
 
   }
 
@@ -120,31 +123,53 @@ class App extends React.Component {
   // const listRef = useRef(null);
   // this.listRef = React.createRef();
 
-scrollLeft() {
+  scrollLeft() {
 
     if (this.listRef.current) {
       this.listRef.current.scrollBy({
-    top: 0,
-    left: -500,
-    behavior: "smooth",
+        top: 0,
+        left: -1200,
+        behavior: "smooth",
 
       })
     }
   };
 
-scrollRight() {
-  console.log(this.listRef.current);
+  scrollRight() {
+
     if (this.listRef.current) {
       this.listRef.current.scrollBy({
-    top: 0,
-    left: 500,
-    behavior: "smooth",
+        top: 0,
+        left: 1200,
+        behavior: "smooth",
 
       })
     }
   };
 
+  resetToEnd() {
 
+    if (this.listRef.current) {
+      this.listRef.current.scrollBy({
+        top: 0,
+        left: 2400,
+        behavior: "smooth",
+
+      })
+    }
+  };
+
+  resetBeginning() {
+
+    if (this.listRef.current) {
+      this.listRef.current.scrollBy({
+        top: 0,
+        left: -2400,
+        behavior: "smooth",
+
+      })
+    }
+  };
 
 
 
@@ -163,10 +188,18 @@ scrollRight() {
           <MiddleWrapper>
             <HeadingWrapper>
               <Header />
-              <NavButtons scrollLeft={this.scrollLeft} scrollRight={this.scrollRight} renderPage={this.renderPage} />
+              <NavButtons
+              scrollLeft={this.scrollLeft}
+              scrollRight={this.scrollRight}
+              renderPage={this.renderPage}
+              resetToEnd={this.resetToEnd}
+              resetBeginning={this.resetBeginning}
+              />
+
+
             </HeadingWrapper>
             <Carousel
-            listRef={this.listRef}
+              listRef={this.listRef}
               carousel={this.state.renderedListings}
               modal={this.renderModal}
               liked={this.state.wasLiked}

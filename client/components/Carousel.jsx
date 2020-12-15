@@ -60,7 +60,7 @@ background-color: rgb(247, 247, 247);
 // padding 0;
 display: flex;
 align-items: center;
-max-width: 3000px;
+max-width: auto;
 overflow-y: auto;
 margin: auto;
 ::-webkit-scrollbar {
@@ -72,8 +72,9 @@ margin: auto;
 const List = styled.div`
 display: flex;
 overflow-y: hidden;
-justify-content: center;
-margin: 0px 4px 15px;
+justify-content: left;
+// margin: 0px 4px 15px;
+
 
 ::-webkit-scrollbar {
   display: ;
@@ -82,9 +83,9 @@ margin: 0px 4px 15px;
 
 const Item = styled.div`
 margin: 0px 2px;
-max-width: 25%;
+// max-width: 25%;
 flex: 0 0 25%;
-padding: 20px;
+// padding: 20px;
 text-align: center;
 cursor: pointer;
 display: flex;
