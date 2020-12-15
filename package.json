@@ -2,7 +2,7 @@
   "name": "image-carousel",
   "version": "",
   "description": "image-carousel for FEC",
-  "author": "Daniel DePaoli & Chris Ciervo",
+  "author": "Daniel DePaoli",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
