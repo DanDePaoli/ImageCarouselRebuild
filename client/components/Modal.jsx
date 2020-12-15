@@ -163,8 +163,9 @@ class Modal extends React.Component {
               <DummyDiv />
             </Header>
             <ListContainer>
-              <ListItem>List Item</ListItem>
-              <ListItem>Anotha One</ListItem>
+              <ListItem>Favorites</ListItem>
+              <ListItem>Spring Break</ListItem>
+              <ListItem>Family Vacation</ListItem>
             </ListContainer>
             <Footer>
               <CreateList type="button" onClick={this.handleClick}>Create a list</CreateList>

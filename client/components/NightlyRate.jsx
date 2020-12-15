@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 const PerNight = styled.span`
   margin-left: 0.25em;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
 `;
 
 const Rate = styled.div`

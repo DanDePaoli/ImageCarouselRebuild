@@ -16,6 +16,8 @@ const SpaceAvailable = styled.li`
   font-size: 16px;
   margin: inherit;
   padding: inherit;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
 `;
 
 const Wrapper = styled.div`

@@ -8,10 +8,11 @@ const Heading = styled.h2`
   background-color: inherit;
   display: inherit;
   color: #222222;
-  font-weight: 600;
+  font-weight: 450;
   font-size: 22px;
   margin: 0;
   padding: 0;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 `;
 
 const Section = styled.section`
@@ -21,7 +22,7 @@ const Section = styled.section`
 
 const Header = () => (
   <Section>
-    <Heading>Places to stay</Heading>
+    <Heading>More places to stay</Heading>
   </Section>
 );
 

@@ -10,6 +10,8 @@ const NumOfComments = styled.span`
   color: rgb(113, 113, 113);
   font-size: 12px;
   margin-left: 3px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
 `;
 
 const OutOfFiveStars = styled.span`
@@ -17,6 +19,8 @@ const OutOfFiveStars = styled.span`
   display: flex;
   font-size: 14px;
   padding: inherit;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
 `;
 
 const StarSpan = styled.span`

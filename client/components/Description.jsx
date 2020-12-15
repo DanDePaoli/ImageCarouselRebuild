@@ -8,10 +8,11 @@ const Title = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 85%;
-  font-weight: 400;
   font-size: 16px;
   max-height: 20px;
   margin-bottom: 4px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
 `;
 
 const Description = (props) => (
