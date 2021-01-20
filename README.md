@@ -1,4 +1,4 @@
-Thanks for taking a loot at my repo.
+Thanks for taking a look at my repo.
 
 This is a rebuild of a project I did while at Hack Reactor.
 
